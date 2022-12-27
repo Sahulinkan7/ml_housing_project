@@ -9,7 +9,8 @@ DESCRIPTION="This is my First END to END ML Project."
 PACKAGES=['housing']
 REQUIREMENT_FILE_NAME='requirements.txt'
 
-def get_requirements_list()->List[str]: #returns a list of string .  
+def get_requirements_list()->List[str]: #returns a list of string . 
+     
     """
     Description : This function is going to list of requirements 
     mentioned in requirements.txt file.
