@@ -7,7 +7,7 @@ import tarfile
 from six.moves import urllib
 import pandas as pd
 import numpy as np
-from sklearn.model_selection import StratifiedShufflesplit
+from sklearn.model_selection import StratifiedShuffleSplit
 
 class DataIngestion:
 
@@ -79,7 +79,7 @@ class DataIngestion:
             logging.info(f"Splitting data into train and test ")
             strat_train_set=None
             strat_test_set=None
-            split=StratifiedShufflesplit(n_splits=1,test_size=0.2,random_state=42)
+            split=StratifiedShuffleSplit(n_splits=1,test_size=0.2,random_state=42)
 
             for train_index,test_index in split.split(housing_dataframe,housing_dataframe['income_cat']):
                 strat_train_set=housing_dataframe.loc[train_index].drop(['income_cat'],axis=1)

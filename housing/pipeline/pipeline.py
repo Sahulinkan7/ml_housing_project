@@ -9,7 +9,7 @@ from housing.entity.config_entity import DataIngestionConfig
 from housing.component.data_ingestion import DataIngestion
 
 
-class pipeline:
+class Pipeline:
     def __init__(self,config:Configuration=Configuration()) -> None:
         try:
             self.config=Configuration()
