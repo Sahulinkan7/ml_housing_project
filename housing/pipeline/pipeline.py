@@ -10,7 +10,7 @@ from housing.component.data_ingestion import DataIngestion
 
 
 class Pipeline:
-    def __init__(self,config:Configuration=Configuration()) -> None:
+    def __init__(self,config:Configuration=Configuration())-> None:
         try:
             self.config=Configuration()
         except Exception as e :
