@@ -56,9 +56,8 @@ class DataValidation:
                 message=f"Trainig file: {trainig_file} or Testing file {testing_file} is not available"
                 raise Exception(message)
 
-            
-
             return is_available
+
         except Exception as e:
             raise HousingException(e,sys) from e
     
@@ -111,7 +110,6 @@ class DataValidation:
         try:
             report=self.get_and_save_data_drift_report()
             self.save_data_drift_report_page()
-
         
             return True
         except Exception as e:
